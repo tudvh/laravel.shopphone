@@ -1,0 +1,15 @@
+#content {
+    background-color: var(--color-bg);
+}
+
+.list-product {
+    border-radius: 0.375rem;
+}
+
+.title {
+    cursor: default;
+}
+
+a.view-all:hover {
+    text-decoration: underline;
+}

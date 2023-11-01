@@ -1,0 +1,173 @@
+.cart {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    margin-bottom: 30px;
+}
+
+.cart *:not(h2) {
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.cart h2 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cart table {
+    width: 100%;
+}
+
+.cart table tr {
+    border-bottom: 2px solid var(--color-bg);
+}
+
+.cart table tbody tr:last-child {
+    border: none;
+}
+
+.cart td,
+.cart th {
+    padding: 30px 0;
+    cursor: default;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.cart td:first-child,
+.cart th:first-child {
+    padding-left: 30px;
+}
+
+.cart td:last-child,
+.cart th:last-child {
+    padding-right: 30px;
+}
+
+.cart th {
+    font-size: 1.1rem;
+}
+
+.cart input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.cart .name {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.cart .name img {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 0.375rem;
+}
+
+.cart .name p {
+    margin: 0;
+}
+
+.cart .name:hover p {
+    color: var(--color-primary-2);
+    text-decoration: underline;
+}
+
+.cart .price,
+.cart .sale-price {
+    margin: 0px;
+}
+
+.cart .price {
+    text-decoration: line-through;
+    font-size: 0.85rem;
+    color: #000;
+}
+
+.cart .sale-price {
+    font-size: 0.95rem;
+}
+
+.cart .quantity input {
+    width: 60px;
+    padding: 8px 5px 8px 8px;
+    outline: none;
+    border: 2px solid var(--color-primary);
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+}
+
+.cart .quantity input:focus {
+    border-color: var(--color-primary-2);
+}
+
+.cart .total {
+    font-weight: 500;
+}
+
+.cart .action > a > * {
+    font-size: 1.4rem;
+    padding: 10px 0 10px 10px;
+}
+
+.cart .action > a > *:hover {
+    color: var(--color-primary-2);
+}
+
+.cart-controll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 0 20px var(--color-bg), 0 -20px 20px var(--color-bg);
+    padding: 20px 30px;
+    background-color: var(--white);
+}
+
+.cart-controll a {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.cart-controll a:hover {
+    color: var(--color-primary-2);
+    text-decoration: underline;
+}
+
+.cart-controll .remove-many {
+    margin-right: 20px;
+}
+
+.cart-controll .checkout {
+    display: flex;
+    align-items: center;
+}
+
+.cart-controll .total-price {
+    font-size: 1.1rem;
+    margin: 0 30px 0 0;
+    cursor: default;
+}
+
+.cart-controll .btn-checkout {
+    padding: 10px 30px;
+    border-radius: 0.375rem;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.cart-controll .btn-checkout:hover {
+    color: var(--white);
+    background-color: var(--color-primary-2);
+    text-decoration: none;
+}
+
+#sp_tuong_tu {
+    margin-top: 20px;
+    background-color: #fff;
+}

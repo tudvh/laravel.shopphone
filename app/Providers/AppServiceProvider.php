@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
@@ -23,19 +24,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         view()->composer('*', function ($view) {
-            // Side bar
 
+            // Side bar
             $listCategoryID = Product::select('category_id')->distinct()->get()->pluck('category_id')->toArray();
-            $listCategory = Category::select('id', 'name')->whereIn('id', $listCategoryID)->where('status', 1)->get()->toArray();
+            $listCategory = Category::select('id', 'name', 'slug')->whereIn('id', $listCategoryID)->where('status', 1)->get()->toArray();
 
             foreach ($listCategory as $key => $item) {
                 $listBrandID = Product::select('brand_id')->distinct()->where('category_id', $item)->get()->pluck('brand_id')->toArray();;
-                $listBrand = Brand::select('id', 'name')->whereIn('id', $listBrandID)->where('status', 1)->get()->toArray();
+                $listBrand = Brand::select('id', 'name', 'slug')->whereIn('id', $listBrandID)->where('status', 1)->get()->toArray();
 
                 $listCategory[$key]['listBrand'] = $listBrand;
             }
-
-            // End side bar
 
             $view->with([
                 'listCategory' => $listCategory
